@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitTrack Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <i data-lucide="activity"></i>
+        <span>FitTrack Pro</span>
+      </div>
+      <div class="nav-links">
+        <button class="nav-button active">Dashboard</button>
+        <button class="nav-button">Workouts</button>
+        <button class="nav-button">Meals</button>
+        <button class="nav-button">Profile</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-header">
+          <i data-lucide="activity" class="icon-indigo"></i>
+          <span class="stat-value" id="calories-burned">0</span>
+        </div>
+        <p class="stat-title">Calories Burned</p>
+        <p class="stat-unit">kcal</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">
+          <i data-lucide="trending-up" class="icon-green"></i>
+          <span class="stat-value" id="workouts-completed">0</span>
+        </div>
+        <p class="stat-title">Workouts Completed</p>
+        <p class="stat-unit">sessions</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">
+          <i data-lucide="calendar" class="icon-blue"></i>
+          <span class="stat-value" id="streak-days">0</span>
+        </div>
+        <p class="stat-title">Current Streak</p>
+        <p class="stat-unit">days</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">
+          <i data-lucide="utensils" class="icon-purple"></i>
+          <span class="stat-value" id="daily-calories">2000</span>
+        </div>
+        <p class="stat-title">Daily Calories</p>
+        <p class="stat-unit">kcal goal</p>
+      </div>
+    </div>
+
+    <div class="content-grid">
+      <section class="panel">
+        <h2>Recent Workouts</h2>
+        <div id="workouts-list" class="list-container"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Meal Plan</h2>
+        <div class="search-container">
+          <input type="text" id="meal-search" placeholder="Search for a meal...">
+          <button id="search-button">Search</button>
+        </div>
+        <div id="meals-list" class="list-container"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
